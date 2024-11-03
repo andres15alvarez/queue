@@ -1,1 +1,2 @@
-console.log("Hello World")
+import { Queue } from './queue'
+export default Queue
