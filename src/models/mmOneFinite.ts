@@ -7,10 +7,18 @@ export class MM1Finite implements IModel {
       throw new Error('Max Capacity is required for finite model')
     }
     const rho = lambda / mu
-    const p0 = 1 - rho / (1 - Math.pow(rho, maxCapacity + 1))
-    const Pn: Probability[] = []
-    for (let i = 1; i < maxCapacity; i++) {
-      const Pi = p0 * Math.pow(rho, 1)
+    if (rho >= 1) {
+      throw new Error('Rho must be less than 1')
+    }
+    const p0 = (1 - rho) / (1 - Math.pow(rho, maxCapacity + 1))
+    const Pn: Probability[] = [
+      {
+        probability: p0,
+        cummulative: p0
+      }
+    ]
+    for (let i = 1; i <= maxCapacity; i++) {
+      const Pi = p0 * Math.pow(rho, i)
       Pn.push({
         probability: Pi,
         cummulative: Pn[i - 1].cummulative + Pi
