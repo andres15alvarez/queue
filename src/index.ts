@@ -1,2 +1,2 @@
 import { Queue } from './queue'
-export default Queue
+module.exports = { Queue }
