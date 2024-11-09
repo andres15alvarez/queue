@@ -1,17 +1,31 @@
 {
-  "name": "queue",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@dcyt/queue",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "typescript",
+    "queue",
+    "queueing-theory"
+  ],
+  "author": "Andres Alvarez ",
+  "license": "MIT",
+  "description": "Models of Queueing Theory and Costs of queues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andres15alvarez/queue"
+  },
+  "homepage": "https://github.com/andres15alvarez/queue",
   "devDependencies": {
     "@eslint/js": "^9.14.0",
     "@types/eslint__js": "^8.42.3",
@@ -21,6 +35,7 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "3.3.3",
+    "tsup": "^8.3.5",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.12.2"
   }
