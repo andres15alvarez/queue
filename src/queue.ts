@@ -1,5 +1,6 @@
 import { QueueType } from './constants'
 import { IModel } from './models/IModel'
+import { MM1Finite } from './models/mmOneFinite'
 import { MM1Infinite } from './models/mmOneInfinite'
 import { ModelProps, ModelResult } from './types'
 
@@ -31,6 +32,9 @@ export class Queue {
       case QueueType.MM1_INFINITE:
         calculator = new MM1Infinite()
         return calculator.calculate({ lambda, mu, iterations })
+      case QueueType.MMC_FINITE:
+        calculator = new MM1Finite()
+        return calculator.calculate({ lambda, mu, maxCapacity })
       default:
         calculator = new MM1Infinite()
         return calculator.calculate({ lambda, mu, iterations })
