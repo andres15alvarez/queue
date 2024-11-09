@@ -6,7 +6,7 @@ import { MM1Infinite } from './models/mmOneInfinite'
 import { ModelProps, ModelResult } from './types'
 
 export class Queue {
-  public getModel(server: number, maxCapacity: number): QueueType {
+  private getModel(server: number, maxCapacity: number): QueueType {
     if (server == 1 && maxCapacity == 0) return QueueType.MM1_INFINITE
     if (server == 1 && maxCapacity > 0) return QueueType.MM1_FINITE
     if (server > 1 && maxCapacity == 0) return QueueType.MMC_INFINITE
