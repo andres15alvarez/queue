@@ -22,7 +22,7 @@
     "queue",
     "queueing-theory"
   ],
-  "author": "Andres Alvarez ",
+  "author": "Andres Alvarez <andres15alvarez@gmail.com>",
   "license": "MIT",
   "description": "Models of Queueing Theory and Costs of queues",
   "repository": {
