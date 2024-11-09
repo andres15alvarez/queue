@@ -76,7 +76,7 @@ jobs:
         run: npm install
 
       - name: Set registry
-        run: echo registry=https://npm.pkg.github.com/andres15alvarez >> .npmrc
+        run: echo registry=https://npm.pkg.github.com/:_authToken=${{secrets.GPR_TOKEN}} >> .npmrc
 
       - name: Build
         run: npm run build
