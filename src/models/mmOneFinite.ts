@@ -7,9 +7,6 @@ export class MM1Finite implements IModel {
       throw new Error('Max Capacity is required for finite model')
     }
     const rho = lambda / mu
-    if (rho >= 1) {
-      throw new Error('Rho must be less than 1')
-    }
     const p0 = (1 - rho) / (1 - Math.pow(rho, maxCapacity + 1))
     const Pn: Probability[] = [
       {

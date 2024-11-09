@@ -25,10 +25,3 @@ test('MM1Finite without maxCapacity', () => {
     'Max Capacity is required for finite model'
   )
 })
-
-test('MM1Finite with rho >= 1', () => {
-  const mm1Finite = new MM1Finite()
-  expect(() => mm1Finite.calculate({ lambda: 10, mu: 5, maxCapacity: 4 })).toThrowError(
-    'Rho must be less than 1'
-  )
-})
