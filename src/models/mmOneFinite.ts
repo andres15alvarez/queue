@@ -18,7 +18,7 @@ export class MM1Finite implements IModel {
     }
     const lambdaLost = lambda * Pn[maxCapacity].probability
     const lambdaEff = lambda - lambdaLost
-    const rhoEff = lambdaEff / mu;
+    const rhoEff = lambdaEff / mu
     const top =
       rhoEff *
       (1 -
@@ -29,7 +29,6 @@ export class MM1Finite implements IModel {
     const W = L / lambdaEff
     const Wq = W - 1 / mu
     const Lq = lambdaEff * Wq
-    
 
     return {
       L,
