@@ -1,3 +1,5 @@
 import { Queue } from './queue'
+import { ModelProps, ModelResult, Probability } from './types'
 
-exports.Queue = Queue
+export { Queue }
+export type { ModelProps, ModelResult, Probability }
