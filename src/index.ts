@@ -1,2 +1,3 @@
 import { Queue } from './queue'
-module.exports = { Queue }
+
+exports.Queue = Queue
